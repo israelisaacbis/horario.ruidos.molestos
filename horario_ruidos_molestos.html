@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#123b68">
+<title>Horario de ruidos molestos</title>
+<style>
+  :root { --navy:#123b68; --blue:#dcecf8; --ink:#26384b; --red:#b91c1c; --redbg:#fce2df; }
+  * { box-sizing:border-box; }
+  body { margin:0; padding:24px 16px; background:#f4f7fa; color:var(--ink); font-family:Arial,Helvetica,sans-serif; }
+  main { max-width:760px; margin:0 auto; background:#fff; border-radius:18px; overflow:hidden; box-shadow:0 8px 28px rgba(18,59,104,.12); }
+  header { background:var(--navy); color:#fff; padding:28px 24px; text-align:center; }
+  h1 { margin:0; font-size:clamp(1.8rem,5vw,2.5rem); }
+  header p { margin:8px 0 0; font-size:1.1rem; color:#e5eff9; }
+  section { padding:22px; }
+  .schedule { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+  .day { border:1px solid #d7e0e8; border-radius:12px; overflow:hidden; }
+  .day h2 { background:var(--blue); color:var(--navy); margin:0; padding:14px; font-size:1.1rem; }
+  .times { padding:16px; }
+  .times p { margin:0 0 16px; line-height:1.55; }
+  .times p:last-child { margin-bottom:0; }
+  .label { display:block; color:var(--navy); font-weight:700; margin-bottom:3px; }
+  .warning { margin-top:20px; background:var(--redbg); color:var(--red); border:1px solid #f2b8b5; border-radius:12px; padding:18px; text-align:center; font-weight:700; line-height:1.5; }
+  footer { text-align:center; padding:0 22px 22px; font-size:.88rem; color:#667085; }
+  @media (max-width:560px) { .schedule { grid-template-columns:1fr; } section { padding:16px; } }
+  @media print { body { background:#fff; padding:0; } main { box-shadow:none; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Ruidos molestos</h1>
+    <p>Trabajos y mudanzas</p>
+  </header>
+  <section>
+    <div class="schedule">
+      <article class="day">
+        <h2>Lunes a viernes</h2>
+        <div class="times">
+          <p><span class="label">Mañana</span>09:00 a 13:00 hrs.</p>
+          <p><span class="label">Tarde</span>15:00 a 18:00 hrs.</p>
+        </div>
+      </article>
+      <article class="day">
+        <h2>Sábado</h2>
+        <div class="times">
+          <p><span class="label">Mañana</span>09:00 a 12:00 hrs.</p>
+          <p><span class="label">Tarde</span>14:00 a 16:00 hrs.</p>
+        </div>
+      </article>
+    </div>
+    <div class="warning">Domingos y festivos no se podrán realizar ruidos molestos.</div>
+  </section>
+  <footer>Horario de ruidos molestos · Trabajos y mudanzas</footer>
+</main>
+</body>
+</html>
